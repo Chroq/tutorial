@@ -48,7 +48,7 @@ func DisplayBalrogHP(dead chan bool, LegolasDamage, GandalfDamage chan int) {
 }
 
 func main() {
-	dead, LegolasDamage, GandalfDamage := make(chan bool, 1), make(chan int, 3), make(chan int)
+	dead, LegolasDamage, GandalfDamage := make(chan bool), make(chan int, 3), make(chan int)
 
 	go LegolasShootArrows(LegolasDamage)
 	go GandalfCastsSpell(dead, GandalfDamage)
@@ -57,5 +57,4 @@ func main() {
 
 	var a string
 	fmt.Scanln(&a)
-
 }
