@@ -38,7 +38,7 @@ func DisplayBalrogHP(dead chan bool, LegolasDamage, GandalfDamage chan int) {
 		}
 
 		if incomingDamage, open = <-GandalfDamage; open {
-			fmt.Printf("Gandalf casts a spell and deals %d damage(s) ! \n", incomingDamage)
+			fmt.Printf("Gandalf casts a spell and deals %d damages ! \n", incomingDamage)
 		}
 
 		balrogHP -= incomingDamage
